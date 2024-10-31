@@ -1,7 +1,7 @@
 const cellPattern = "*";
 const emptyPattern = " ";
 
-const createPyramidWithNRows = (numOfRows) => {
+const createPyramidWithNRows = (numOfRows: number) => {
    const totalSpace = numOfRows + numOfRows - 1;
    const row = new Array(totalSpace).fill(emptyPattern);
    const mid = Math.ceil(totalSpace / 2) - 1;
@@ -14,7 +14,7 @@ const createPyramidWithNRows = (numOfRows) => {
 };
 
 
-const createInvertedPyramidOfNRows = (numOfRows) => {
+const createInvertedPyramidOfNRows = (numOfRows: number) => {
    const totalSpace = numOfRows + numOfRows - 1;
    const row = new Array(totalSpace).fill(cellPattern);
    const mid = Math.ceil(totalSpace / 2) - 1;
@@ -25,7 +25,3 @@ const createInvertedPyramidOfNRows = (numOfRows) => {
       row[totalSpace - 1 - i] = emptyPattern; 
    }
 };
-
-createPyramidWithNRows(5);
-
-createInvertedPyramidOfNRows(5);
